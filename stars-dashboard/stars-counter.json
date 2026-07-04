@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "projectName": "stars-dashboard",
+  "generatedAt": "2026-07-04T11:56:58.421Z",
+  "summary": {
+    "score": 10,
+    "status": "green"
+  },
+  "gates": {
+    "security": {
+      "score": 10,
+      "status": "green",
+      "evidence": [
+        "npm audit --audit-level=high script",
+        "eslint-plugin-security dependency/configuration",
+        "gitleaks configuration or CI workflow"
+      ],
+      "missing": [],
+      "metrics": [
+        {
+          "label": "High vulnerabilities",
+          "value": "0"
+        },
+        {
+          "label": "Security checks",
+          "value": "3/3 passed"
+        }
+      ]
+    },
+    "testing": {
+      "score": 10,
+      "status": "green",
+      "evidence": [
+        "Jest dependency or configuration",
+        "Playwright dependency or configuration",
+        "80% coverage threshold"
+      ],
+      "missing": [],
+      "metrics": [
+        {
+          "label": "Coverage",
+          "value": "80%"
+        },
+        {
+          "label": "Test checks",
+          "value": "3/3 passed"
+        }
+      ]
+    },
+    "accessibility": {
+      "score": 10,
+      "status": "green",
+      "evidence": [
+        "eslint-plugin-jsx-a11y dependency/configuration",
+        "axe runtime accessibility dependency or test",
+        "zero-violation WCAG hard gate"
+      ],
+      "missing": [],
+      "metrics": [
+        {
+          "label": "Accessibility violations",
+          "value": "0"
+        },
+        {
+          "label": "Accessibility checks",
+          "value": "3/3 passed"
+        }
+      ]
+    },
+    "reliability": {
+      "score": 10,
+      "status": "green",
+      "evidence": [
+        "Playwright configuration",
+        "Chromium project",
+        "WebKit project",
+        "retry configuration"
+      ],
+      "missing": [],
+      "metrics": [
+        {
+          "label": "Browser projects",
+          "value": "2/2"
+        },
+        {
+          "label": "Retries",
+          "value": "enabled"
+        }
+      ]
+    },
+    "scalability": {
+      "score": 10,
+      "status": "green",
+      "evidence": [
+        "ESLint complexity rule",
+        "ESLint max-depth rule",
+        "ESLint max-lines-per-function rule",
+        "ESLint max-params rule"
+      ],
+      "missing": [],
+      "metrics": [
+        {
+          "label": "Complexity violations",
+          "value": "0"
+        },
+        {
+          "label": "Lint rules",
+          "value": "4/4 configured"
+        }
+      ]
+    }
+  }
+}

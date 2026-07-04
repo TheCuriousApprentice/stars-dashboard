@@ -1,0 +1,79 @@
+{
+  "name": "stars-dashboard",
+  "version": "0.1.0",
+  "description": "S.T.A.R.S framework scanner and dashboard proof of concept for project quality reporting.",
+  "author": "@thecuriousapprentice",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thecuriousapprentice/stars-dashboard.git"
+  },
+  "homepage": "https://github.com/thecuriousapprentice/stars-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/thecuriousapprentice/stars-dashboard/issues"
+  },
+  "keywords": [
+    "stars-framework",
+    "quality-gates",
+    "dashboard",
+    "scanner",
+    "accessibility",
+    "testing",
+    "security"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "scripts", "stars-counter.json", "README.md", "LICENSE"],
+  "bin": {
+    "stars-scan": "./scripts/stars-counter.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "security:audit": "npm audit --audit-level=high",
+    "test": "jest --watch",
+    "test:run": "jest",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage",
+    "test:e2e": "playwright test",
+    "stars:scan": "node scripts/stars-counter.mjs .",
+    "stars:outsource-scan": "node scripts/stars-counter.mjs",
+    "typecheck": "tsc --noEmit",
+    "build:package": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build:package && npm run typecheck && npm run test:run"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "22.15.29",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "next": "^15.5.20",
+    "eslint": "^9.30.1",
+    "eslint-config-next": "^15.5.20",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-security": "^3.0.1",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "playwright": "^1.61.1",
+    "typescript": "5.8.3"
+  }
+}

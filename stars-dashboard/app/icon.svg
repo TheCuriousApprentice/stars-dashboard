@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">S.T.A.R.S Dashboard</title>
+  <desc id="desc">A star mark on a dark square background.</desc>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#172033" />
+  <path d="M32 10l5.8 12.2L51 24.1l-9.6 9.2L43.8 46 32 39.7 20.2 46l2.4-12.7L13 24.1l13.2-1.9L32 10z" fill="#ffffff" />
+</svg>
